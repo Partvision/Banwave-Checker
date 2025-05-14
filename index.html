@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>isthereabanwave.live - Roblox Banwave Checker</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="importmap">
+        {
+            "imports": {
+                "confetti": "https://cdn.skypack.dev/canvas-confetti"
+            }
+        }
+    </script>
+    <script type="module" src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="calm-wave-logo.png" alt="Calm Wave Logo" class="logo">
+            <h1>Roblox Banwave Checker</h1>
+        </header>
+
+        <p class="intro">Help us track potential Roblox banwaves! Submit your status below. Data resets weekly.</p>
+
+        <div id="submission-section">
+            <p id="submission-status"></p>
+            <form id="banwave-survey">
+                <p>Have you or a friend been banned recently?</p>
+                <div class="radio-group">
+                    <input type="radio" id="status-no" name="ban-status" value="no" required>
+                    <label for="status-no">No, everything is fine.</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" id="status-friend" name="ban-status" value="friend-banned">
+                    <label for="status-friend">A friend was banned.</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" id="status-self" name="ban-status" value="self-banned">
+                    <label for="status-self">I was banned.</label>
+                </div>
+                <button type="submit" id="submit-button">Submit Status</button>
+            </form>
+        </div>
+
+        <div id="results-section">
+            <h2>Weekly Banwave Report</h2>
+            <p id="report-week"></p>
+            <div class="results-display">
+                <div class="result-item">
+                    <span class="result-value" id="result-no">0%</span>
+                    <span class="result-label">No issues reported</span>
+                </div>
+                <div class="result-item">
+                    <span class="result-value" id="result-friend">0%</span>
+                    <span class="result-label">Friends banned reported</span>
+                </div>
+                <div class="result-item">
+                    <span class="result-value" id="result-self">0%</span>
+                    <span class="result-label">Self banned reported</span>
+                </div>
+            </div>
+            <p id="total-votes">Total votes this week: 0</p>
+            <p class="refresh-info">Results are based on user submissions for the current week and update in real-time. Data resets weekly.</p>
+        </div>
+    </div>
+</body>
+</html>
